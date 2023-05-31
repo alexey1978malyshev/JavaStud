@@ -1,3 +1,8 @@
+package Trees;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Tree {
 
     Node root;
@@ -27,8 +32,20 @@ public class Tree {
 //        return null;
 //    }
 
-    private Node find(int value){
-        List <Node> currentLine
+    private Node find(Node root, int value){
+        ArrayList<Node> line = new ArrayList<>();
+        line.add(root);
+        while (line.size() > 0){
+            ArrayList<Node> nextLine = new ArrayList<>();
+            for (Node node : line){
+                if (node.value == value){
+                    return  node;
+                }
+                nextLine.addAll(Collections.singleton(node.children));
+            }
+            line = nextLine;
+        }
+        return null;
     }
 
     public class Node {
