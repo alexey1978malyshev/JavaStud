@@ -9,7 +9,7 @@ import java.util.Scanner;
 Требуется восстановить выражение до верного равенства. Предложить хотя бы одно решение или сообщить, что его нет.*/
 public class Task3 {
     public static void main(String[] args) {
-       calculator();
+        calculator();
 
     }
 
