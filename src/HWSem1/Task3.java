@@ -9,7 +9,8 @@ import java.util.Scanner;
 Требуется восстановить выражение до верного равенства. Предложить хотя бы одно решение или сообщить, что его нет.*/
 public class Task3 {
     public static void main(String[] args) {
-        calculator();
+       calculator();
+
     }
 
     public static void calculator() {
@@ -43,8 +44,10 @@ public class Task3 {
                 case ('/') -> result = firstPart / secondPart;
                 case ('^') -> result = Math.pow(firstPart, secondPart);
             }
+            System.out.println();
 
             System.out.println(result);
+
             System.out.println("Введите следующий пример:  ");
 
         }
