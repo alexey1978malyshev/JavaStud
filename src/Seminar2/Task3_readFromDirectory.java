@@ -29,7 +29,7 @@ public class Task3_readFromDirectory {
 
         } catch (Exception e) {
 
-            logger.log(Level.,e.getMessage());
+            logger.log(Level.WARNING,e.getMessage());
         }
         File file = new File(".");
         String[] containDirect = getDirContain(dirPath);
