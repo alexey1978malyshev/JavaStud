@@ -7,10 +7,10 @@ package HWSem1;
 
 public class Task2 {
     public static void main(String[] args) {
-        int i = 0;
-        while (i < 1000) {
+        int i = 3;
+        while (i < 10) {
             boolean flag = true;
-            int j = 3;
+            int j = 2;
             while (j <= i/2) {
                 if (i % j == 0) {
                     flag = false;
