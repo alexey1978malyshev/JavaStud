@@ -5,6 +5,7 @@ import Seminar2.Task3_readFromDirectory;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,12 +18,15 @@ public class Task2 {
     public static void main(String[] args) {
         int[] array = {23, 6, 3, 5, 9, 8, 8, 7, 5, 4, 8, 1};
         bubbleSort(array);
-        StringBuilder sb = new StringBuilder();
-        for (int i : array) {
-            System.out.print(i + " ");
-            sb.append(i + " ");
-        }
-        writeToFile(sb.toString());
+ //       StringBuilder sb = new StringBuilder();
+        String s = Arrays.toString(array);
+        System.out.println(s);
+
+//        for (int i : array) {
+//            System.out.print(i + " ");
+//            sb.append(i + " ");
+//        }
+//        writeToFile(sb.toString());
     }
 
     public static void bubbleSort(int[] arr) {

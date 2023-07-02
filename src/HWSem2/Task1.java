@@ -12,7 +12,9 @@ public class Task1 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите фильтр для поиска: 'ключ = значение'");
         String searchStr = sc.nextLine();
+
         System.out.println(reqToDb(searchStr));
+        sc.close();
 
     }
     public static String reqToDb(String str){
