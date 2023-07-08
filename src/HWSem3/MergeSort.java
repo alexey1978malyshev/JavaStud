@@ -80,4 +80,26 @@ public class MergeSort {
         System.out.printf("Среднее арифметическое элементов списка = %f", (mediumValue));
 
     }
+
+
+    static void merge(int[] arr,int p,int q,int r){
+        int[] changeArr = Arrays.copyOf(arr,arr.length);
+        int i = p;
+        int j = q + 1;
+        for (int k = p; k <= r; k++) {
+            if (i > q) {
+                arr[k] = changeArr[j];
+                j++;
+            } else if (j > r) {
+                arr[k] = changeArr[i];
+                i++;
+            } else if (changeArr[j] < changeArr[i]) {
+                arr[k] = changeArr[j];
+                j++;
+            } else {
+                arr[k] = changeArr[i];
+                i++;
+            }
+        }
+    }
 }
