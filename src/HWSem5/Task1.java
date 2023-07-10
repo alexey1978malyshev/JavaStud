@@ -1,9 +1,7 @@
 package HWSem5;
 
 import java.nio.channels.SelectableChannel;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /*📌 Реализуйте структуру телефонной книги с помощью HashMap,
 учитывая, что 1 человек может иметь несколько телефонов.
@@ -41,6 +39,8 @@ public class Task1 {
             System.out.println("Нажмите любую клавишу для продолжения ввода или q для выхода: ");
         }
         sc.close();
+        String pb = phoneBook.entrySet().toString();
+
         return phoneBook;
     }
 }
